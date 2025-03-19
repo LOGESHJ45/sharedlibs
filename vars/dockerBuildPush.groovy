@@ -13,7 +13,7 @@ def call(Map config) {
 
     def imageName = sanitizedJobName
     def buildTag = env.BUILD_NUMBER
-    def imageWithTag = "${imageName}:${buildTag}"
+    def imageWithTag = "novacisdockerhub/${imageName}:${buildTag}"
 
     node {
         stage('Clone Repository') {
