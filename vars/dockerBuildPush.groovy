@@ -35,7 +35,7 @@ def call(Map config) {
 
         stage('Push to Docker Hub') {
             script {
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-cred') {
+                docker.withRegistry('https://hub.docker.com/repositories/novacisdockerhub', 'docker-hub-cred') {
                     docker.image(imageWithTag).push()
                 }
             }
